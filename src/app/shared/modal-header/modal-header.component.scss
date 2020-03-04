@@ -1,0 +1,19 @@
+.ModalHeader {
+  padding: 5px 10px;
+  background-color: dodgerblue;
+  color: white;
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  .close {
+    text-align: right;
+
+    .closeIcon {
+      cursor: pointer;
+      position: relative;
+      top: 3px;
+    }
+  }
+}

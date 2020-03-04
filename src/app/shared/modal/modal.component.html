@@ -1,0 +1,11 @@
+<div class="modalComponent">
+  <ng-template #defaultHeader>
+    <app-modal-header [config]="config" [dialogRef]="dialogRef"></app-modal-header>
+  </ng-template>
+  <ng-template #defaultFooter>
+    <app-modal-footer [config]="config" [dialogRef]="dialogRef" [payload]="payload"></app-modal-footer>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="headerTemplate || defaultHeader; context"></ng-container>
+  <ng-container *ngTemplateOutlet="contentTemplate; context"></ng-container>
+  <ng-container *ngTemplateOutlet="footerTemplate || defaultFooter; context"></ng-container>
+</div>

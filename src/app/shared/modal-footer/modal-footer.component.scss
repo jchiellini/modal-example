@@ -1,0 +1,20 @@
+@import "../../../styles/mixins";
+
+.ModalFooter {
+  text-align: right;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #cccccc;
+
+  & :not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .primaryButton {
+    @include primaryButton();
+  }
+
+  .secondaryButton {
+    @include secondaryButton();
+  }
+}

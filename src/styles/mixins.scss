@@ -1,0 +1,43 @@
+.basicButton {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+}
+
+@mixin primaryButton($minWidth: 85px) {
+  @extend .basicButton;
+
+  width: $minWidth;
+  border: 1px solid dodgerblue;
+  background-color: dodgerblue;
+  color: white;
+
+  &:hover {
+    border: 1px solid orange;
+    background-color: orange;
+  }
+}
+
+@mixin secondaryButton($minWidth: 85px) {
+  @extend .basicButton;
+
+  width: $minWidth;
+  border: 1px solid dodgerblue;
+  background-color: white;
+  color: dodgerblue;
+
+  &:hover {
+    background-color: dodgerblue;
+    color: white;
+  }
+}
