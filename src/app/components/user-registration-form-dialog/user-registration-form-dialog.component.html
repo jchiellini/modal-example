@@ -1,12 +1,11 @@
 <app-modal [config]="config" [dialogRef]="dialogRef" [payload]="userRegistrationForm">
   <ng-template #content>
-    Test
-    <!--<div class="userRegistrationFormDialog">-->
-      <!--<form [formGroup]="userRegistrationForm" fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutGap.xs="0px">-->
-        <!--<app-form-field [form]="userRegistrationForm" [field]="field"-->
-                        <!--*ngFor="let field of userRegistrationFormConfig" fxFlex.xs=100 fxFlex.sm=50-->
-                        <!--[fxFlex]="field.width || 25"></app-form-field>-->
-      <!--</form>-->
-    <!--</div>-->
+    <div class="userRegistrationFormDialog">
+      <form [formGroup]="userRegistrationForm" fxLayout.xs="column" fxLayout="row wrap" fxLayoutGap="10px grid" fxLayoutGap.xs="0px">
+        <app-form-field [form]="userRegistrationForm" [field]="field"
+                        *ngFor="let field of userRegistrationFormConfig" fxFlex.xs=100 fxFlex.sm=50
+                        [fxFlex]="field.width || 25"></app-form-field>
+      </form>
+    </div>
   </ng-template>
 </app-modal>

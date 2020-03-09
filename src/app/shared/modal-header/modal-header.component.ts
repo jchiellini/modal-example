@@ -12,8 +12,7 @@ import {ModalConfiguration} from '../../interfaces/modal-configuration.interface
 })
 export class ModalHeaderComponent implements OnInit {
   @Input() config: ModalConfiguration;
-
-  @Input() dialogRef: MatDialogRef<any>;
+  @Input() dialogRef;
 
   defaultHeaderConfig = {
     title: 'Modal',
@@ -25,8 +24,6 @@ export class ModalHeaderComponent implements OnInit {
   ngOnInit() {
     const headerConfig = get(this.config, 'header', {});
     this.configuration = assign(this.defaultHeaderConfig, headerConfig);
-    console.log('DD', this.config)
-    console.log('CON', this.configuration);
   }
 
   onClose() {

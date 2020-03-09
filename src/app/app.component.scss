@@ -1,0 +1,56 @@
+@import "../styles/mixins";
+
+.modalButton {
+  @include primaryButton(220px);
+  font-size: 18px;
+}
+
+.content {
+  margin: 50px;
+  text-align: center;
+
+  .well {
+    text-align: left;
+    border-radius: 0 8px 8px 0;
+    border-left: 8px solid dodgerblue;
+    background-color: #eeeeee;
+    padding: 50px;
+    max-width: 500px;
+    margin: auto;
+    //transition: all 3s;
+
+    h1 {
+      color: dodgerblue;
+    }
+
+    ol {
+      text-align: left;
+      margin: 18px;
+      padding: 0;
+    }
+
+    //&:hover {
+    //  background-color: oldlace;
+    //}
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .responseContainer {
+      padding-top: 20px;
+
+      h1 {
+        margin: 0;
+        color: orange;
+      }
+
+      .json {
+        padding: 20px;
+        text-align: left;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+      }
+    }
+  }
+}

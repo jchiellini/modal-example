@@ -1,4 +1,4 @@
 <div class="ModalFooter" *ngIf="configuration.footerVisible">
-  <button class="secondaryButton" (click)="onSecondaryButtonClick()" [disabled]="!configuration.secondaryButtonValidation()">{{configuration.secondaryButtonLabel}}</button>
-  <button class="primaryButton" (click)="onPrimaryButtonClick()" [disabled]="!configuration.primaryButtonValidation()">{{configuration.primaryButtonLabel}}</button>
+  <button class="secondaryButton" (click)="onSecondaryButtonClick()" [disabled]="!configuration.secondaryButtonValidation(payload, configuration, dialogRef)">{{configuration.secondaryButtonLabel}}</button>
+  <button class="primaryButton" (click)="onPrimaryButtonClick()" [disabled]="!configuration.primaryButtonValidation(payload, configuration, dialogRef)">{{configuration.primaryButtonLabel}}</button>
 </div>

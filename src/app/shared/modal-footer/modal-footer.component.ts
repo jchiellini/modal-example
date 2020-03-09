@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MatDialogRef} from '@angular/material/dialog';
 import {ModalFooter} from '../../interfaces/modal-footer.interface';
 import {ModalConfiguration} from '../../interfaces/modal-configuration.interface';
 import {assign, get} from 'lodash';
@@ -12,8 +11,7 @@ import {assign, get} from 'lodash';
 export class ModalFooterComponent implements OnInit {
   @Input() config: ModalConfiguration = {};
   @Input() payload: any = {};
-
-  @Input() dialogRef: MatDialogRef<any>;
+  @Input() dialogRef;
 
   configuration: ModalFooter;
 
@@ -30,11 +28,9 @@ export class ModalFooterComponent implements OnInit {
   ngOnInit(): void {
     const footerConfig = get(this.config, 'footer', {});
     this.configuration = assign(this.defaultFooterConfig, footerConfig);
-    console.log('FFF', this.configuration)
   }
 
   onSecondaryButtonClick() {
-    console.log(this.configuration);
     if (!this.configuration.disableSecondaryButtonClose) {
       this.dialogRef.close();
     }

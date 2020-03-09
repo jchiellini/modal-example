@@ -1,5 +1,32 @@
 <div class="content" role="main">
-  <button class="modalButton" (click)="openModal()">Open Modal</button>
+  <div class="well">
+    <h1>Basic Angular Material Modal Example</h1>
+    <ol>
+      <li>Demonstrates modal implementation</li>
+      <li>Basic form integrated with modal</li>
+      <li>Conditional cancellation dialog</li>
+      <li>Reusable message dialog</li>
+    </ol>
+    <button class="modalButton" (click)="openModal()">Open Modal</button>
+    <div class="responseContainer" *ngIf="formPayload">
+      <div class="json">
+        {{formPayload | json }}
+      </div>
+    </div>
+  </div>
+
+  <div class="well">
+    <h1>Custom Modal Example</h1>
+    <ol>
+      <li>Demonstrates overriding default modal templates</li>
+      <li>Example of how to pass data back to the original component</li>
+    </ol>
+    <button class="modalButton" (click)="openCustomModal()">Open Custom Modal</button>
+    <div class="responseContainer" *ngIf="customResponse">
+      <label>Response:</label>
+      <h1 class="customResponse">{{customResponse}}</h1>
+    </div>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,6 +1,4 @@
-import {Component, Input, TemplateRef} from '@angular/core';
-import {ModalHeader} from '../../interfaces/modal-header.interface';
-import {ModalFooter} from '../../interfaces/modal-footer.interface';
+import {Component, ContentChild, Input, TemplateRef} from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -8,9 +6,10 @@ import {ModalFooter} from '../../interfaces/modal-footer.interface';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent {
-  @Input() headerTemplate: TemplateRef<ModalHeader>;
-  @Input() contentTemplate: TemplateRef<any>;
-  @Input() footerTemplate: TemplateRef<ModalFooter>;
+  @ContentChild('header', { static: false }) headerTemplate: TemplateRef<any>;
+  @ContentChild('content', { static: false }) contentTemplate: TemplateRef<any>;
+  @ContentChild('footer', { static: false }) footerTemplate: TemplateRef<any>;
+
   @Input() dialogRef;
   @Input() payload;
   @Input() config;
