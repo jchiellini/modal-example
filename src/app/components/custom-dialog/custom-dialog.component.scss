@@ -1,0 +1,36 @@
+@import "../../../styles/mixins";
+
+.customDialogHeader {
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: orange;
+  color: #ffffff;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.customDialogContent {
+  padding: 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.customDialogFooter {
+  text-align: center;
+  padding: 20px;
+  background-color: #eeeeee;
+
+  & :not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .primaryButton {
+    @include primaryButton();
+  }
+
+  .secondaryButton {
+    @include secondaryButton();
+  }
+}

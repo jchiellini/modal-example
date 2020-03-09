@@ -1,0 +1,4 @@
+<mat-label *ngIf="field?.label">{{field.label}}</mat-label>
+<mat-form-field class="formField {{field.type}}" [formGroup]="form" appearance="outline" matTooltip="{{tooltip}}">
+  <input matInput [id]="field.id" [formControlName]="field.id" [type]="field.type" placeholder="{{field.placeholder}}">
+</mat-form-field>

@@ -1,0 +1,25 @@
+<app-modal [config]="config">
+  <ng-template #header>
+    <div class="customDialogHeader">
+      <div fxFill>
+        <div fxLayout="row">
+          <div fxFlex>
+            <h3>{{config.header.title}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #content>
+    <div class="customDialogContent">
+      <span>{{config.content.message}}</span>
+    </div>
+  </ng-template>
+  <ng-template #footer>
+    <div class="customDialogFooter">
+      <button class="primaryButton" (click)="onActionButtonClick('Yes')">Yes</button>
+      <button class="secondaryButton" (click)="onActionButtonClick('No')">No</button>
+      <button class="secondaryButton" (click)="onActionButtonClick('Maybe')">Maybe</button>
+    </div>
+  </ng-template>
+</app-modal>
